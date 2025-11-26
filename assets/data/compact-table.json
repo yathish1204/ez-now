@@ -1,0 +1,296 @@
+[
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Daytona Trans",
+      "speed": "5 mph",
+      "heading": "North",
+      "status": "Inactive",
+      "id":"1"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Palms Elementary",
+      "speed": "2 mph",
+      "heading": "South",
+      "status": "Active",
+      "id":"2"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Hwy 31 South",
+      "speed": "53 mph",
+      "heading": "East",
+      "status": "2:56",
+      "id":"3"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Hwy 31 South",
+      "speed": "65 mph",
+      "heading": "West",
+      "status": "12:32",
+      "id":"4"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Riverdale Park",
+      "speed": "30 mph",
+      "heading": "North",
+      "status": "Active",
+      "id":"5"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Oceanview Drive",
+      "speed": "45 mph",
+      "heading": "South",
+      "status": "Inactive",
+      "id":"6"
+    },
+  
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Maple Street",
+      "speed": "25 mph",
+      "heading": "East",
+      "status": "Active",
+      "id":"7"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Cedar Lane",
+      "speed": "40 mph",
+      "heading": "West",
+      "status": "Inactive",
+      "id":"8"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Sunnyvale Road",
+      "speed": "50 mph",
+      "heading": "North",
+      "status": "Active",
+      "id":"9"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Pine Grove",
+      "speed": "35 mph",
+      "heading": "South",
+      "status": "Inactive",
+      "id":"10"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Birchwood Avenue",
+      "speed": "55 mph",
+      "heading": "East",
+      "status": "2:10",
+      "id":"11"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Elm Street",
+      "speed": "60 mph",
+      "heading": "West",
+      "status": "12:45",
+      "id":"12"
+    },
+  
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Hillcrest Drive",
+      "speed": "20 mph",
+      "heading": "North",
+      "status": "Active",
+      "id":"13"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Seaside Blvd",
+      "speed": "70 mph",
+      "heading": "South",
+      "status": "Inactive",
+      "id":"14"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Aspen Way",
+      "speed": "15 mph",
+      "heading": "East",
+      "status": "Active",
+      "id":"15"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Lakeshore Drive",
+      "speed": "75 mph",
+      "heading": "West",
+      "status": "2:30",
+      "id":"16"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Cypress Road",
+      "speed": "10 mph",
+      "heading": "North",
+      "status": "Inactive",
+      "id":"17"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Ridgeway Street",
+      "speed": "80 mph",
+      "heading": "South",
+      "status": "Active",
+      "id":"18"
+    },
+  
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Springfield Avenue",
+      "speed": "90 mph",
+      "heading": "East",
+      "status": "12:00",
+      "id":"19"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Maplewood Drive",
+      "speed": "35 mph",
+      "heading": "West",
+      "status": "Inactive",
+      "id":"20"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Green Valley Road",
+      "speed": "45 mph",
+      "heading": "North",
+      "status": "Active",
+      "id":"21"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Canyon Drive",
+      "speed": "55 mph",
+      "heading": "South",
+      "status": "Inactive",
+      "id":"22"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Valley View Road",
+      "speed": "25 mph",
+      "heading": "East",
+      "status": "Active",
+      "id":"23"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Woodland Way",
+      "speed": "65 mph",
+      "heading": "West",
+      "status": "2:15",
+      "id":"24"
+    },
+  
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Brookstone Lane",
+      "speed": "60 mph",
+      "heading": "North",
+      "status": "12:40",
+      "id":"25"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Sunset Boulevard",
+      "speed": "50 mph",
+      "heading": "South",
+      "status": "Inactive",
+      "id":"26"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Elmwood Street",
+      "speed": "30 mph",
+      "heading": "East",
+      "status": "Active",
+      "id":"27"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Pine Hill Road",
+      "speed": "15 mph",
+      "heading": "West",
+      "status": "Inactive",
+      "id":"28"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Misty Meadows",
+      "speed": "80 mph",
+      "heading": "North",
+      "status": "Active",
+      "id":"29"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Quartz Avenue",
+      "speed": "90 mph",
+      "heading": "South",
+      "status": "2:25",
+      "id":"30"
+    },
+  
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Sunflower Lane",
+      "speed": "20 mph",
+      "heading": "East",
+      "status": "Inactive",
+      "id":"31"
+    },
+    {
+      "bus": 100,
+      "route": 100,
+      "location": "Maple Grove",
+      "speed": "50 mph",
+      "heading": "West",
+      "status": "Active",
+      "id":"32"
+    }
+  ]
+  

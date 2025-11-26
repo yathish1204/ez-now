@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.3.5/css/dataTables.dataTables.css"
+    />
+  </head>
+  <body>
+    <div class="table-responsive">
+      <table id="myTable" class="display">
+        <thead>
+          <tr>
+            <th>Bus</th>
+            <th>Route</th>
+            <th>Location</th>
+            <th>Speed</th>
+            <th>Heading</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="http://cdn.datatables.net/2.3.5/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.5/js/dataTables.js"></script>
+    <script type="module" src="./assets/js/script.js"></script>
+    <script>
+      let table = new DataTable("#myTable");
+    </script>
+  </body>
+</html>

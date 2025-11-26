@@ -1,13 +1,3 @@
-// Show Active menu-list
-// const items = document.querySelectorAll(".nav-item");
-
-// items.forEach((item) => {
-//   item.addEventListener("click", function () {
-//     items.forEach((i) => i.classList.remove("active"));
-//     this.classList.add("active");
-//   });
-// });
-
 document.addEventListener("click", function (e) {
   let link = e.target.closest(".nav-item");
   if (!link) return;
@@ -23,16 +13,37 @@ document.addEventListener("click", function (e) {
 });
 
 // Time Display
-function updateTime() {
-  const now = new Date();
-  const formatted = now.toLocaleTimeString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: true,
-  });
-  document.getElementById("current-time").textContent = formatted;
-}
+// function updateTime() {
+//   const now = new Date();
+//   const formatted = now.toLocaleTimeString("en-US", {
+//     hour: "2-digit",
+//     minute: "2-digit",
+//     hour12: true,
+//   });
+//   document.getElementById("current-time").textContent = formatted;
+// }
 
-updateTime(); // run immediately
+// updateTime(); // run immediately
 
-setInterval(updateTime, 6000);
+// setInterval(updateTime, 6000);
+
+// Functionality - Resize columns
+
+const dragIcon = document.querySelector(".drag-icon");
+const left = document.querySelector(".split__left");
+let mouse_is_down = false;
+
+dragIcon.addEventListener("mousedown", (e) => {
+  mouse_is_down = true;
+  document.body.style.userSelect = "none";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!mouse_is_down) return;
+  left.style.width = `${e.clientX}px`;
+});
+
+document.addEventListener("mouseup", () => {
+  mouse_is_down = false;
+  document.body.style.userSelect = "auto";
+});
