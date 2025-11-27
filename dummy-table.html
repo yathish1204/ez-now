@@ -4,34 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/2.3.5/css/dataTables.dataTables.css"
-    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="table-responsive">
-      <table id="myTable" class="display">
-        <thead>
-          <tr>
-            <th>Bus</th>
-            <th>Route</th>
-            <th>Location</th>
-            <th>Speed</th>
-            <th>Heading</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="tableBody"></tbody>
-      </table>
+    <div class="d-flex flex-column gap-2 p-2">
+      <div class="d-flex justify-content-between">
+        <div class="d-flex flex-column">
+          <span class="d-flex"
+            ><p class="pe-3 mb-0 fw-medium">Driver:</p>
+            <p class="mb-0">First</p>
+            ,
+            <p class="mb-0">Last</p></span
+          >
+          <span class="d-flex"
+            ><p class="pe-3 mb-0 fw-medium">Attendant:</p>
+            <p class="mb-0">First</p>
+            ,
+            <p class="mb-0">Last</p></span
+          >
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <div class="d-flex align-items-center gap-1">
+            <input type="checkbox" name="allstops" id="allStops" />
+            <label for="allStops" class="m-0">Display All Stops</label>
+          </div>
+
+          <img
+            class="c-pointer"
+            src="./assets/images/xlsx.png"
+            alt="xlsx doc icon"
+          />
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div class="d-flex flex-column">
+          <h6 class="mb-0 fw-bold text-decoration-underline">Route 100 AM</h6>
+          <p class="mb-0">Arrive Pine Trail Elem</p>
+          <p class="mb-0">Arrive Pine Trail Elem</p>
+          <p class="mb-0">Arrive Pine Trail Elem</p>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="d-flex flex-column">
+            <p class="mb-0 fw-medium text-decoration-underline">Actual</p>
+            <p class="mb-0">07:13</p>
+            <p class="mb-0">07:13</p>
+            <p class="mb-0">07:13</p>
+          </div>
+          <div class="d-flex flex-column">
+            <p class="mb-0 fw-medium text-decoration-underline">Planned</p>
+            <p class="mb-0">07:13</p>
+            <p class="mb-0">07:13</p>
+            <p class="mb-0">07:13</p>
+          </div>
+          <div class="d-flex flex-column">
+            <p class="mb-0 fw-medium text-decoration-underline">Macro</p>
+            <p class="mb-0">07:13</p>
+            <p class="mb-0">07:13</p>
+            <p class="mb-0">07:13</p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column gap-1">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <h6 class="mb-0 fw-bold text-decoration-underline">Route 100 PM</h6>
+          <div class="d-flex gap-2">
+            <p class="mb-0">Actual</p>
+            <p class="mb-0">Planned</p>
+            <p class="mb-0">Macro</p>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <h6 class="mb-0 fw-medium">Aroville</h6>
+          <div class="d-flex gap-2">
+            <p class="mb-0">07:13</p>
+            <p class="mb-0">07:13</p>
+            <p class="mb-0">07:13</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="http://cdn.datatables.net/2.3.5/js/dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/2.3.5/js/dataTables.js"></script>
     <script type="module" src="./assets/js/script.js"></script>
-    <script>
-      let table = new DataTable("#myTable");
-    </script>
   </body>
 </html>

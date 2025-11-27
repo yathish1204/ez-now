@@ -36,6 +36,9 @@ html{
     display: none;             /* Chrome/Safari */
   }
   
+  .c-pointer{
+    cursor: pointer;
+  }
 
 /* flex */
 
@@ -146,25 +149,7 @@ nav{
     height: calc(100vh - 60px);
   }
 
-  /* Drag functionality classes */
-
-
-
-  .drag-icon{
-    position: absolute;
-  right:-20px;
-  top: 12px;
-  transform: translateY(-50%);
-  background: white;
-  padding: 2px 2px;
-  cursor: ew-resize;
-  width: fit-content;
-  }
-
-  .drag-icon:hover {
-    background: #d5d5d5;
-  }
-  
+ 
 
 
   /* Data table styling */
@@ -172,6 +157,7 @@ nav{
   .dt-search{
     padding: 0 8px;
   }
+  
 
   .dt-search label{
     display: none;
@@ -190,10 +176,57 @@ nav{
     display: none;
   }
 
-  .table-responsive{
-    max-height: calc(100% - 122px);
+  .location.active:active{
+    text-decoration: underline;
+  }
+
+  #tableBody{
+    height: 100% !important;
     overflow-y: auto;
 }
+
+#tableWrapper {
+  max-height: calc(100vh - 60px);      /* your desired body height */
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+
+
+#myTable thead th {
+  position: sticky;
+  top: 0;
+  background: #fff;       /* or your table header color */
+  z-index: 10;
+}
+
+
+.dataTables_scrollBody {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  max-height: calc(100vh - 120px); /* adjust if header size changes */
+}
+
+ /* Drag functionality classes */
+
+
+
+ .drag-icon{
+    position: absolute;
+    right:-20px;
+    top: 12px;
+    transform: translateY(-50%);
+    background: white;
+    padding: 2px 2px;
+    cursor: ew-resize;
+    width: fit-content;
+    z-index: 1000;
+  }
+
+  .drag-icon:hover {
+    background: #d5d5d5;
+  }
+  
 
   .custom-container {
     display: flex;
@@ -201,16 +234,17 @@ nav{
     height: 100%;
   }
   
-  .split__left {
+  #split__left {
     min-width: 27%;
     max-width: 50%;
+    height: calc(100vh - 60px);
     @media  (max-width: 1198px) {
       max-width: 30%;
     }
     background-color: white;
   }
   
-  .split__right {
+  #split__right {
     flex: 1;
   }
 
@@ -221,3 +255,10 @@ nav{
   .end-4{
     right: 16px;
   }
+
+
+  .col-grow{
+    width: auto;
+  }
+
+ 

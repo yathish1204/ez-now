@@ -304,30 +304,30 @@
     <!-- Main Content -->
     <div class="container-fluid px-0">
       <div id="header"></div>
-      <div class="custom-container split">
-        <div  class="split__left position-relative bg-gray py-2">
-          <div class="table-responsive scrollbar-none">
-            <table id="myTable" class="display table table-striped">
-              <thead>
-                <tr>
-                  <th>Bus</th>
-                  <th>Route</th>
-                  <th>Location</th>
-                  <th>Speed</th>
-                  <th>Heading</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody id="tableBody"></tbody>
-            </table>
-          </div>
-          <div  class="drag-icon">
+      <div class="custom-container split vh-100-60">
+        <div id="split__left" class="position-relative bg-gray py-2 h-100">
+            <div id="tableWrapper" class="table-responsive scrollbar-none">
+              <table id="myTable" class="display table table-bordered-end ">
+                <thead>
+                  <tr>
+                    <th>Bus</th>
+                    <th>Route</th>
+                    <th>Location</th>
+                    <th>Speed</th>
+                    <th>Heading</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+              </table>
+            </div>
+          <div id="dragIcon"  class="drag-icon position-absolute">
             <img src="assets/images//drag-icon.png" alt="drag-icon" />
           </div>
         </div>
       <div id="split__right" class="w-100 vh-100-60px bg-gray position-relative">
         <!-- Overlay Right -->
-        <div class="d-flex flex-column gap-1 bg-white p-1 rounded-2 position-absolute end-4 top-4">
+        <div class="d-flex flex-column gap-1 bg-white p-1 rounded-2 position-absolute end-4 top-4 shadow">
             <div class="nav-item dropdown p-1">
                 <a
                   class="nav-link d-flex flex-lg-column align-items-center justify-content-start justify-content-lg-center gap-3 gap-lg-0 p-0 fs-7"
@@ -448,8 +448,5 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./assets/js/script.js"></script>
     <script type="module" src="./assets/js/compact-table.js"></script>
-    <script>
-      let table = new DataTable("#myTable");
-    </script>
   </body>
 </html>

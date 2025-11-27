@@ -29,8 +29,8 @@ document.addEventListener("click", function (e) {
 
 // Functionality - Resize columns
 
-const dragIcon = document.querySelector(".drag-icon");
-const left = document.querySelector(".split__left");
+const dragIcon = document.querySelector("#dragIcon");
+const left = document.querySelector("#split__left");
 let mouse_is_down = false;
 
 dragIcon.addEventListener("mousedown", (e) => {
