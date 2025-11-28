@@ -25,88 +25,148 @@ async function renderTable() {
     parent.style.backgroundColor = bg;
 
     parent.innerHTML = `
-      <td  style="background-color:${bg};" 
+      <td  style="background-color:${bg}; width:70px; max-width:70px; white-space:nowrap;" 
                 >
-                <span class="dropdown position-relative">
-                <p class="mb-0 fw-medium" role="button"
+                <span class="dropdown  position-relative">
+                <p class="mb-0 fw-medium " role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false" >${b.bus}</P>
-                <ul class="dropdown-menu position-absolute">
-                <li>
-                  <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                    >Bus History
-                    <img src="assets/images/arrow-right.png" alt="arrow-right"
-                  /></a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                    >Macro Summary<img
-                      src="assets/images/arrow-right.png"
-                      alt="arrow-right"
-                  /></a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                    >Macro Summary (Beta)<img
-                      src="assets/images/arrow-right.png"
-                      alt="arrow-right"
-                  /></a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                    >Data Viewer<img
-                      src="assets/images/arrow-right.png"
-                      alt="arrow-right"
-                  /></a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                    >Time on Bus<img
-                      src="assets/images/arrow-right.png"
-                      alt="arrow-right"
-                  /></a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                    >Rider List<img
-                      src="assets/images/arrow-right.png"
-                      alt="arrow-right"
-                  /></a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                    >Route Paths<img
-                      src="assets/images/arrow-right.png"
-                      alt="arrow-right"
-                  /></a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                    >Print Location<img
-                      src="assets/images/arrow-right.png"
-                      alt="arrow-right"
-                  /></a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                    >Parent App<img
-                      src="assets/images/arrow-right.png"
-                      alt="arrow-right"
-                  /></a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                    >MDT Message<img
-                      src="assets/images/arrow-right.png"
-                      alt="arrow-right"
-                  /></a>
-                </li>
-               
-              </ul>
+               <ul class="dropdown-menu">
+
+  <!-- Bus History -->
+  <li class="dropdown-submenu">
+    <a class="dropdown-item" href="#" onclick="toggleSubmenu(event)">
+      Bus History
+      <img class="submenu-arrow" src="assets/images/arrow-right.png" alt="arrow" />
+    </a>
+    <ul class="dropdown-menu submenu">
+      <li><a class="dropdown-item text-danger fw-semibold" href="#">AM</a></li>
+      <li><a class="dropdown-item text-primary fw-semibold" href="#">PM</a></li>
+      <li><a class="dropdown-item fw-semibold" href="#">Date</a></li>
+    </ul>
+  </li>
+
+  <!-- Macro Summary -->
+  <li class="dropdown-submenu">
+    <a class="dropdown-item" href="#" onclick="toggleSubmenu(event)">
+      Macro Summary
+      <img class="submenu-arrow" src="assets/images/arrow-right.png" alt="arrow" />
+    </a>
+    <ul class="dropdown-menu submenu">
+      <li><a class="dropdown-item text-danger fw-semibold" href="#">AM</a></li>
+      <li><a class="dropdown-item text-primary fw-semibold" href="#">PM</a></li>
+      <li><a class="dropdown-item fw-semibold" href="#">Date</a></li>
+    </ul>
+  </li>
+
+  <!-- Macro Summary (Beta) -->
+  <li class="dropdown-submenu">
+    <a class="dropdown-item" href="#" onclick="toggleSubmenu(event)">
+      Macro Summary (Beta)
+      <img class="submenu-arrow" src="assets/images/arrow-right.png" alt="arrow" />
+    </a>
+    <ul class="dropdown-menu submenu">
+      <li><a class="dropdown-item text-danger fw-semibold" href="#">AM</a></li>
+      <li><a class="dropdown-item text-primary fw-semibold" href="#">PM</a></li>
+      <li><a class="dropdown-item fw-semibold" href="#">Date</a></li>
+    </ul>
+  </li>
+
+  <!-- Data Viewer -->
+  <li class="dropdown-submenu">
+    <a class="dropdown-item" href="#" onclick="toggleSubmenu(event)">
+      Data Viewer
+      <img class="submenu-arrow" src="assets/images/arrow-right.png" alt="arrow" />
+    </a>
+    <ul class="dropdown-menu submenu">
+      <li><a class="dropdown-item" href="#">Today</a></li>
+      <li><a class="dropdown-item" href="#">Date</a></li>
+    </ul>
+  </li>
+
+  <!-- Time on Bus -->
+  <li class="dropdown-submenu">
+    <a class="dropdown-item" href="#" onclick="toggleSubmenu(event)">
+      Time on Bus
+      <img class="submenu-arrow" src="assets/images/arrow-right.png" alt="arrow" />
+    </a>
+    <ul class="dropdown-menu submenu">
+      <li><a class="dropdown-item text-danger fw-semibold" href="#">AM</a></li>
+      <li><a class="dropdown-item text-danger fw-semibold" href="#">PM</a></li>
+      <li><a class="dropdown-item fw-semibold" href="#">Date</a></li>
+    </ul>
+  </li>
+
+  <!-- Rider List -->
+  <li class="dropdown-submenu">
+    <a class="dropdown-item" href="#" onclick="toggleSubmenu(event)">
+      Rider List
+      <img class="submenu-arrow" src="assets/images/arrow-right.png" alt="arrow" />
+    </a>
+    <ul class="dropdown-menu submenu">
+      <li><a class="dropdown-item text-danger fw-semibold" href="#">AM</a></li>
+      <li><a class="dropdown-item text-primary fw-semibold" href="#">PM</a></li>
+      <li><a class="dropdown-item fw-semibold" href="#">Date</a></li>
+    </ul>
+  </li>
+
+  <!-- Route Paths -->
+  <li class="dropdown-submenu">
+    <a class="dropdown-item" href="#" onclick="toggleSubmenu(event)">
+      Route Paths
+      <img class="submenu-arrow" src="assets/images/arrow-right.png" alt="arrow" />
+    </a>
+    <ul class="dropdown-menu submenu">
+      <li><a class="dropdown-item text-danger fw-semibold" href="#">AM</a></li>
+      <li><a class="dropdown-item text-primary fw-semibold" href="#">PM</a></li>
+      <li><a class="dropdown-item fw-semibold" href="#">Date</a></li>
+    </ul>
+  </li>
+
+  <!-- Print Location -->
+  <li class="dropdown-submenu">
+    <a class="dropdown-item" href="#" onclick="toggleSubmenu(event)">
+      Print Location
+      <img class="submenu-arrow" src="assets/images/arrow-right.png" alt="arrow" />
+    </a>
+    <ul class="dropdown-menu submenu">
+      <li><a class="dropdown-item text-danger fw-semibold" href="#">AM</a></li>
+      <li><a class="dropdown-item text-primary fw-semibold" href="#">PM</a></li>
+      <li><a class="dropdown-item fw-semibold" href="#">Date</a></li>
+    </ul>
+  </li>
+
+  <!-- Parent App -->
+  <li class="dropdown-submenu">
+    <a class="dropdown-item" href="#" onclick="toggleSubmenu(event)">
+      Parent App
+      <img class="submenu-arrow" src="assets/images/arrow-right.png" alt="arrow" />
+    </a>
+    <ul class="dropdown-menu submenu">
+      <li><a class="dropdown-item fw-semibold" href="#">Parent Banner</a></li>
+      <li><a class="dropdown-item fw-semibold" href="#">Send Notification</a></li>
+    </ul>
+  </li>
+
+  <!-- MDT Message -->
+  <li class="dropdown-submenu">
+    <a class="dropdown-item" href="#" onclick="toggleSubmenu(event)">
+      MDT Message
+      <img class="submenu-arrow" src="assets/images/arrow-right.png" alt="arrow" />
+    </a>
+    <ul class="dropdown-menu submenu">
+      <li><a class="dropdown-item fw-semibold" href="#">New Message</a></li>
+      <li><a class="dropdown-item fw-semibold" href="#">Sent Message</a></li>
+    </ul>
+  </li>
+
+</ul>
+
+
                 </span>
                 </td>
       <td style="background-color:${bg};">${b.route}</td>
-      <td style="background-color:${bg};" class="toggle-btn text-nowrap c-pointer col-grow user-select-none"><img class="pe-1 toggle-btn " src="${randomSrc}" alt="location image" />${
+      <td style="background-color:${bg};" class="toggle-btn text-nowrap c-pointer  col-grow user-select-none"><img class="pe-1 toggle-btn " src="${randomSrc}" alt="location image" />${
       b.location
     }</td>
       <td class="text-nowrap" style="background-color:${bg};"><img class="pe-1" src="./assets/images/speed.png" alt="speed image" />${

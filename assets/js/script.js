@@ -13,19 +13,19 @@ document.addEventListener("click", function (e) {
 });
 
 // Time Display
-// function updateTime() {
-//   const now = new Date();
-//   const formatted = now.toLocaleTimeString("en-US", {
-//     hour: "2-digit",
-//     minute: "2-digit",
-//     hour12: true,
-//   });
-//   document.getElementById("current-time").textContent = formatted;
-// }
+function updateTime() {
+  const now = new Date();
+  const formatted = now.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+  });
+  document.getElementById("current-time").textContent = formatted;
+}
 
-// updateTime(); // run immediately
+updateTime(); // run immediately
 
-// setInterval(updateTime, 6000);
+setInterval(updateTime, 6000);
 
 // Functionality - Resize columns
 
@@ -46,4 +46,34 @@ document.addEventListener("mousemove", (e) => {
 document.addEventListener("mouseup", () => {
   mouse_is_down = false;
   document.body.style.userSelect = "auto";
+});
+
+// Dropdown - Nested
+
+function toggleSubmenu(event) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  const currentSubmenu = event.target
+    .closest(".dropdown-submenu")
+    .querySelector(".submenu");
+
+  // 1) Close ALL other open submenus
+  document
+    .querySelectorAll(".dropdown-submenu .submenu.show")
+    .forEach((menu) => {
+      if (menu !== currentSubmenu) {
+        menu.classList.remove("show");
+      }
+    });
+
+  // 2) Toggle only the clicked one
+  currentSubmenu.classList.toggle("show");
+}
+
+// Avoiding close of dropdown
+document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+  menu.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
 });

@@ -3,6 +3,8 @@
     --text-light:#ffffff;
     --accent-blue:#01294D;
     --bg-gray:#F9FAFB;
+    --gray-200:#C2CDD6;
+    --red-100:#FFF0F1;
 }
 
 *,*::after,*::before{
@@ -25,10 +27,14 @@ html{
     background-color: var(--bg-gray) !important;
 }
 
+input [type="checkbox"],input[type="radio"]{
+  accent-color: var(--accent-blue) !important;
+}
+
 
 
 .scrollbar-none {
-    -ms-overflow-style: none;  /* IE/Edge */
+    -ms-overflow-y-style: none;  /* IE/Edge */
     scrollbar-width: none;     /* Firefox */
   }
   
@@ -70,17 +76,17 @@ nav{
     min-width: 62px !important;
 }
 
-.nav-item img{
+.nav-item img, .map-item img{
     width: 24px !important;
     height: 24px !important;
 }
 
-.nav-item.active{
+.nav-item.active, .map-item.active{
     background-color: #01294D;
     border-radius: 0.5rem;
 }
 
-.nav-item.active .nav-link{
+.nav-item.active .nav-link,.map-item.active{
     color:var(--text-light) !important ;
 }
 
@@ -97,6 +103,7 @@ nav{
 .custom-arrow{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
   .custom-arrow::after{
@@ -156,6 +163,7 @@ nav{
 
   .dt-search{
     padding: 0 8px;
+    
   }
   
 
@@ -170,6 +178,8 @@ nav{
     border-radius: 0.5rem;
     border: 1px solid #C2CDD6;
     padding: 0 0.5rem;
+    margin-bottom: 8px;
+    height: 32px;
   }
 
   .dt-length{
@@ -185,7 +195,7 @@ nav{
     overflow-y: auto;
 }
 
-#tableWrapper {
+#leftWrapper {
   max-height: calc(100vh - 60px);      /* your desired body height */
   overflow-y: auto;
   overflow-x: auto;
@@ -199,6 +209,11 @@ nav{
   background: #fff;       /* or your table header color */
   z-index: 10;
 }
+
+td.active-underline:hover{
+  text-decoration: dashed !important;
+}
+
 
 
 .dataTables_scrollBody {
@@ -220,7 +235,7 @@ nav{
     padding: 2px 2px;
     cursor: ew-resize;
     width: fit-content;
-    z-index: 1000;
+    z-index: 100;
   }
 
   .drag-icon:hover {
@@ -243,6 +258,13 @@ nav{
     }
     background-color: white;
   }
+
+  @media (max-width: 1024px) {
+    #split__left {
+      max-width: 60%;
+      min-width:40%;
+    }
+  }
   
   #split__right {
     flex: 1;
@@ -261,4 +283,95 @@ nav{
     width: auto;
   }
 
- 
+
+
+  /* Milwaukee CSS */
+
+
+  .bg-red-100{
+    background-color: var(--red-100);
+  }
+
+  .border-gray-200{
+    border: 1px solid var(--gray-200);
+  }
+
+  .form-control:focus{
+    border: 1px solid #dee2e6;
+  }
+
+  .search-sort{
+    position: sticky;
+  top: 0;
+  background:var(--bg-gray); 
+  z-index: 10;
+  }
+
+
+  /* Max-w-classes */
+
+  .max-w-150{
+    max-width: 150px !important;
+    width: 100%;
+  }
+
+  .text-accent-blue{
+    color: var(--accent-blue);
+  }
+
+.max-w-120{
+  max-width: 120px !important;
+  width: 100%;
+}
+
+#container{
+  overflow-x: auto;
+}
+
+/* Popover modal Styling */
+
+/* .bus-card {
+  cursor: pointer;
+  transition: background 0.2s ease;
+} */
+
+.bus-card.selected-card {
+  background: #f1f1f1 !important;
+}
+
+.bus-popover {
+  max-width: 500px;
+  width: 100%;
+}
+
+.bus-popover .popover-body {
+  font-size: 14px;
+}
+
+.z-100{
+  z-index: 1000;
+}
+
+/* Nested Dropdown classes */
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+}
+
+.dropdown-submenu .submenu.show {
+  display: block;
+}
+
+.submenu-arrow {
+  width: 14px;
+  height: 14px;
+  float: right;
+}
