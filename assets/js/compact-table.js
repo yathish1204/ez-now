@@ -324,12 +324,14 @@ function attachExpandHandler() {
 }
 
 // Render table & initialize DataTables
-$("#myTable").DataTable().destroy();
+$(function () {
+  $("#myTable").DataTable().destroy();
 
-renderTable();
+  renderTable();
 
-$("#myTable").DataTable({
-  paging: false,
-  info: false,
-  ordering: true,
+  $("#myTable").DataTable({
+    paging: false,
+    info: false,
+    ordering: true,
+  });
 });
