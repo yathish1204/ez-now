@@ -28,7 +28,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
-          class="collapse navbar-collapse custom-dropdown p-3"
+          class="collapse navbar-collapse custom-dropdown p-3 z-100"
           id="navbarSupportedContent"
         >
           <ul class="navbar-nav flex items-center gap-3 me-auto mb-2 mb-lg-0">
@@ -307,15 +307,15 @@
            <!-- Left Content Milwaukee -->
            <div id="leftWrapper" class="table-responsive  scrollbar-none">
            <div class="d-flex flex-column gap-2 px-2">
-            <div class="d-flex flex-column  ">
-              <p class="mb-0 fw-semibold fs-7 text-danger">
+            <div class="d-flex flex-column fs-7">
+              <p class="mb-0 fw-semibold text-danger">
                 Unassigned <span class="text-decoration-underline">Packages</span> (33)
               </p>
               <p class="mb-0 p-1 bg-red-100 border-gray-200 rounded-2 mt-1">
                 A100, A200, A300, A400, A500, A600, A700, A800, A900, A101, A102, A103, A104, A105, A106, A107, A108, A109, A110
               </p>
             </div>
-            <div class="d-flex flex-column  ">
+            <div class="d-flex flex-column  fs-7">
               <p class="mb-0 fw-semibold fs-7 text-danger">
                 Unassigned <span class="text-decoration-underline">Routes</span> (88)
               </p>
@@ -329,11 +329,11 @@
            <div class="d-flex flex-column search-sort w-100">
             
            <!-- SearchFiled -->
-           <div class="input-group mt-2 px-2">
+           <div class="input-group mt-2 px-2"  >
             <span class="input-group-text  bg-white   border-end-0">
               <span><img src="assets/images/search.png" alt="search icon"></span>
             </span>
-            <input 
+            <input  
               type="text" 
               class="form-control form-control-sm border-start-0  shadow-none" 
               id="searchInput" 
@@ -370,106 +370,219 @@
       <div id="split__right" class="w-100 vh-100-60px bg-gray position-relative">
         <!-- Overlay Right -->
         <div class="d-flex flex-column gap-1 bg-white p-1 rounded-2 position-absolute end-4 top-4 shadow">
-            <div class="nav-item dropdown p-1">
-                <a
-                  class="nav-link d-flex flex-lg-column align-items-center justify-content-start justify-content-lg-center gap-3 gap-lg-0 p-0 fs-7"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <span
-                    ><img
-                      src="assets/images/display.png"
-                      data-default="assets/images/display.png"
-                      data-active="assets/images/display.png"
-                      alt="reports"
-                  /></span>
-                  <p class="mb-0 fw-semibold fs-6 dropdown-toggle">Display</p>
-                </a>
-                <ul class="dropdown-menu position-absolute">
-                  <li>
-                    <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                      >Vehicle Reports
-                      <img src="assets/images/arrow-right.png" alt="arrow-right"
-                    /></a>
-                  </li>
-                  
-                  <li>
-                    <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                      >Parent App<img
-                        src="assets/images/arrow-right.png"
-                        alt="arrow-right"
-                    /></a>
-                  </li>
-                </ul>
+          <div class="map-item dropdown dropstart p-1">
+            <a
+              class="nav-link d-flex flex-column align-items-center  justify-content-center  gap-0 p-0 fs-8"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span
+                ><img
+                  src="assets/images/display.png"
+                  data-default="assets/images/display.png"
+                  data-active="assets/images/display.png"
+                  alt="reports"
+              /></span>
+              <p class="mb-0 fw-semibold  dropdown-toggle">Display</p>
+            </a>
+            <ul class="full-h-dropdown scrollbar-none dropdown-menu px-2" style="min-width:250px;"  >
+               <!-- Section 1 -->
+<label class="fw-bold small">Admin Units to Display</label>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="all">
+  <label class="form-check-label small" for="all">All</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="area1">
+  <label class="form-check-label small" for="area1">Area 1 (North)</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="area2">
+  <label class="form-check-label small" for="area2">Area 2 (South)</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="area3">
+  <label class="form-check-label small" for="area3">Area 3 (East)</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="area4">
+  <label class="form-check-label small" for="area4">Area 4 (West)</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="area5">
+  <label class="form-check-label small" for="area5">Area 5 (Service)</label>
+</div>
+
+<hr class="my-2">
+
+<!-- Section 2 -->
+<label class="fw-bold small">Display Route</label>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="routeStyle" id="routeNum">
+  <label class="form-check-label small" for="routeNum">by route number</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="routeStyle" id="routeSeg">
+  <label class="form-check-label small" for="routeSeg">by route segments</label>
+</div>
+
+<hr class="my-2">
+
+<!-- Section 3 -->
+<label class="fw-bold small">Table Style</label>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="tableStyle" id="cards">
+  <label class="form-check-label small" for="cards">Cards</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="tableStyle" id="classic">
+  <label class="form-check-label small" for="classic">Classic</label>
+</div>
+
+<hr class="my-2">
+
+<!-- Section 4 – More checkboxes -->
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="routeFirst">
+  <label class="form-check-label small" for="routeFirst">Show route buses first</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="lateRoutes">
+  <label class="form-check-label small" for="lateRoutes">Show late routes only</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="parentBanners">
+  <label class="form-check-label small" for="parentBanners">Show parent banners</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="fullscreenMap">
+  <label class="form-check-label small" for="fullscreenMap">Show full screen map</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="driverNames">
+  <label class="form-check-label small" for="driverNames">Show driver names</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="tabletLogins">
+  <label class="form-check-label small" for="tabletLogins">Show tablet logins</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="rampDown">
+  <label class="form-check-label small" for="rampDown">Ramp Down report - Any depot</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="realTimeIcons">
+  <label class="form-check-label small" for="realTimeIcons">Use RealTime Icons V2</label>
+</div>
+            </ul>
+          </div>
+        <div class="map-item dropdown dropstart p-1"  >
+            <a
+              class="nav-link d-flex flex-column align-items-center  justify-content-center  gap-0 p-0 fs-8"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span
+                ><img
+                  src="assets/images/geozones.png"
+                  data-default="assets/images/geozones.png"
+                  data-active="assets/images/geozones.png"
+                  alt="reports"
+              /></span>
+              <p class="mb-0 fw-semibold dropdown-toggle">Geozones</p>
+            </a>
+            <ul class="dropdown-menu  px-2" style="min-width:450px;">
+              <label class="fw-semibold mb-1">Jump to Geozone</label>
+
+              <!-- Search box -->
+              <input 
+                type="text" 
+                class="form-control mb-2" 
+                id="geozoneSearch"
+                placeholder="Type here to search"
+              />
+          
+              <div class="border-top pt-2">
+                <a class="dropdown-item" href="#">Add / Edit Geozones</a>
               </div>
-            <div class="nav-item dropdown p-1">
-                <a
-                  class="nav-link d-flex flex-lg-column align-items-center justify-content-start justify-content-lg-center gap-3 gap-lg-0 p-0 fs-7"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <span
-                    ><img
-                      src="assets/images/geozones.png"
-                      data-default="assets/images/geozones.png"
-                      data-active="assets/images/geozones.png"
-                      alt="reports"
-                  /></span>
-                  <p class="mb-0 fw-semibold fs-6 dropdown-toggle">Geozones</p>
-                </a>
-                <ul class="dropdown-menu position-absolute">
-                  <li>
-                    <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                      >Vehicle Reports
-                      <img src="assets/images/arrow-right.png" alt="arrow-right"
-                    /></a>
-                  </li>
-                  
-                  <li>
-                    <a class="dropdown-item dropdown-toggle custom-arrow" href="#"
-                      >Parent App<img
-                        src="assets/images/arrow-right.png"
-                        alt="arrow-right"
-                    /></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="nav-item p-1">
-                <a
-                  class="nav-link d-flex flex-lg-column align-items-center justify-content-start justify-content-lg-center gap-3 gap-lg-0 p-0 fs-7"
-                  aria-current="page"
-                  href="#"
-                >
-                  <span
-                    ><img
-                      src="assets/images/address.png"
-                      data-default="assets/images/address.png"
-                      data-active="assets/images/address.png"
-                      alt="student"
-                  /></span>
-                  <p class="mb-0 fw-semibold fs-6">Address</p></a
-                >
-              </div>
-              <div class="nav-item p-1">
-                <a
-                  class="nav-link d-flex flex-lg-column align-items-center justify-content-start justify-content-lg-center gap-3 gap-lg-0 p-0 fs-7"
-                  aria-current="page"
-                  href="#"
-                >
-                  <span
-                    ><img
-                      src="assets/images/info.png"
-                      data-default="assets/images/info.png"
-                      data-active="assets/images/info.png"
-                      alt="info"
-                  /></span>
-                  <p class="mb-0 fw-semibold fs-6">Info</p></a
-                >
-              </div>
+            </ul>
+          </div>
+          <div class="map-item dropstart p-1">
+            <a
+              class="nav-link d-flex flex-column align-items-center  justify-content-center  gap-0 p-0 fs-8"
+              aria-current="page"
+              href="#" role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span
+                ><img
+                  src="assets/images/address.png"
+                  data-default="assets/images/address.png"
+                  data-active="assets/images/address.png"
+                  alt="student"
+              /></span>
+              <p class="mb-0 fw-semibold  dropdown-toggle">Address</p></a>
+            <ul class="dropdown-menu  px-2" style="min-width:450px;">
+              <label class="fw-semibold mb-0">Address</label>
+            <p class="text-muted fst-italic mb-2" style="font-size: 12px;">
+              (School Name, City, State)
+            </p>
+        
+            <!-- Input -->
+            <input 
+              type="text" 
+              class="form-control mb-3" 
+              placeholder="Enter Address or School"
+              style="border-radius: 10px;"
+            />
+        
+            <!-- Buttons -->
+            <div class="d-flex justify-content-end gap-2">
+              <button class="btn btn-outline-dark px-4" style="border-radius: 10px;">Cancel</button>
+              <button class="btn btn-primary px-4" style="border-radius: 10px; background-color:#0d6efd;">Search</button>
+            </div>
+        
+            </ul>
+            
+          </div>
+          <div class="map-item p-1">
+            <a
+              class="nav-link d-flex flex-column align-items-center  justify-content-center  gap-0 p-0 fs-8"
+              aria-current="page"
+              href="#"
+            >
+              <span
+                ><img
+                  src="assets/images/info.png"
+                  data-default="assets/images/info.png"
+                  data-active="assets/images/info.png"
+                  alt="info"
+              /></span>
+              <p class="mb-0 fw-semibold ">Info</p></a
+            >
+          </div>
         </div>
         <iframe
           class="w-100 h-100"
